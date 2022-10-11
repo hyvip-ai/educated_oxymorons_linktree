@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  justify-content: center;
+  background: rgb(67, 67, 67);
+  background: linear-gradient(150deg, rgba(67, 67, 67, 1) 0%, rgba(0, 0, 0, 1) 100%);
+
+}
+
+.links {
+  width: 720px;
+  padding-left: 10px;
+  padding-right: 30px;
+}
+
+.linkBlock {
+  margin-bottom: 45px;
+  background-color: rgb(131, 77, 249);
+  margin-top: 45px;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.purple {
+
+  background-color: rgb(131, 77, 249);
+}
+
+.yellow {
+  background-color: rgb(241, 196, 15)
+}
+
+.green {
+  background-color: rgb(46, 204, 113);
+}
+
+.blue {
+  background-color: rgb(52, 152, 219);
+}
+
+.linkBlock:hover {
+  transform: scale(1.02);
+}
+
+.linkBlock::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  background: rgb(98, 26, 254);
+  right: -20px;
+  width: 20px;
+  height: 100%;
+  transform-origin: right bottom;
+  transform: skewY(45deg);
+}
+
+.purple::after {
+  background: rgb(98, 26, 254);
+}
+
+.yellow::after {
+  background-color: rgb(216, 173, 0);
+}
+
+.green::after {
+  background-color: rgb(39, 174, 96);
+}
+
+.blue::after {
+  background-color: rgb(41, 128, 185);
+}
+
+.linkBlock::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: rgb(29, 6, 80);
+  transform-origin: top left;
+  transform: skewX(45deg);
+}
+
+.purple::before {
+  background: rgb(70, 0, 222);
+}
+
+.yellow::before {
+  background-color: rgb(185, 148, 0);
+}
+
+.green::before {
+  background-color: rgb(0, 143, 60);
+}
+
+.blue::before {
+  background-color: rgb(0, 86, 143);
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 8px 44px;
+  font-size: 35px;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+}
+
+.us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name {
+  font-size: 25px;
+
+}
+
+.share {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 105px;
+  flex-direction: column;
+}
+
+.share svg {
+  stroke: black;
+  stroke-width: 0;
+}
+
+.share:active {
+  transform: scale(0.95);
+}
+
+@media(max-width:700px) {
+  .links {
+    width: 100%;
+  }
+
+  .name {
+    font-size: 18px;
+
+  }
+
+  a {
+    font-size: 25px;
+  }
+}
