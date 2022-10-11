@@ -1,11 +1,18 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 function Share() {
   return (
     <button
       className='share'
-      onClick={() =>
-        navigator.clipboard.writeText(import.meta.env.VITE_REACT_APP_URL)
-      }
+      onClick={() => {
+        navigator.clipboard.writeText(import.meta.env.VITE_REACT_APP_URL);
+        Swal.fire({
+          title: 'Link copied successfully!',
+          icon: 'success',
+          confirmButtonText: 'Cool',
+          timer: 2000,
+        });
+      }}
     >
       <svg
         width='16'

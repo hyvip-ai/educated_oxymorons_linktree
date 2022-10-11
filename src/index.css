@@ -177,4 +177,9 @@ img {
   a {
     font-size: 25px;
   }
+
+  .share {
+    right: 30px;
+    top: 20px;
+  }
 }
